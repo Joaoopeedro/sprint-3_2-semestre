@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conversão Temperatura</title>
+</head>
+
+<body>
+
+    <h1>Conversor de temperatura</h1>
+
+    <form id="formtemperatura">
+        <input type="number" required name="temperatura" id="temperatura">
+        <input type="checkbox"  id="celcius" name="temperatura">Celcius</checkbox>
+        <input type="checkbox"  id="fahrenheit" name="temperatura">Fahrenheit</checkbox>
+        <button type="submit" id="btnConverter">Converter</button>
+    </form>
+
+    <script>
+        let celcios = document.querySelector('#celcius')
+        let fahren = document.querySelector('#fahrenheit')
+        let bnt = document.querySelector('#btnConverter')
+        
+        bnt.addEventListener ('click',function(pagina){
+            pagina.preventDefault();
+            
+            let temperatura = document.querySelector('#temperatura')
+            if(celcios.checked == true){
+                var valor = `A temperatura em C° é: ${(parseInt( temperatura.value) - 32) / 1.8}`
+                
+            }
+            if(fahren.checked == true){
+                var valor = `A temperatura em F° é: ${parseInt( temperatura.value) * 1.8 + 32}`
+            }
+            if(fahren.checked == false && celcios.checked == false){
+                var valor = `Selecione uma das temperaturas para a conversão`
+                
+            }
+            if(fahren.checked == true && celcios.checked == true){
+                var valor = `Selecione APENAS UMA das temperaturas para a conversão`
+                
+            }
+            console.log(valor)
+            
+            var verificação = document.getElementById("resposta")
+
+            if(!verificação){
+                var respostaTela = document.createElement("span")
+                respostaTela.id = "resposta"
+                var conteudo = document.createTextNode(valor)
+                respostaTela.appendChild(conteudo)
+                
+                var div = document.getElementById("formtemperatura")
+                document.body.insertBefore(respostaTela,div)
+
+            }
+            if(verificação){
+                verificação.innerHTML = valor
+            }
+
+
+
+
+        })
+    </script>
+
+</body>
+
+</html>
