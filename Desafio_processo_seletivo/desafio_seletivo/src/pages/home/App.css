@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.H1{
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 5px;
+}
+
+.bnt_buscar{
+  height: 28px;
+  background-color: green;
+  color: white;
+  margin-left: 5px;
+}
+.input_name{
+  height: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-left: 5px;
+}
+.tabela thead{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+}
+.tabela tbody{
+  background-color: rgb(68, 68, 68);
+  color: white;
+}
+.tabela{
+  border: 2px solid black;
+  margin-left: 5px;
+}
+.alinhartexto{
+  text-align: center;
+}
